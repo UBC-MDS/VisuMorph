@@ -2,7 +2,7 @@
 name = "visumorph"
 version = "0.0.1"
 description = "Package for image manipulations in Python"
-authors = ["Orix Au Yeung, Marco Bravo, Atabak Alishiri, Shawn Hu"]
+authors = ["VisuMorph authors"]
 license = "MIT"
 readme = "README.md"
 
