@@ -16,7 +16,6 @@ def flip(image, v=0):
     ------
     TypeError
         If the image is not a valid VisuMorph Image and/or v is not 0 or 1.
-   
 
     Examples
     --------
