@@ -25,7 +25,8 @@ def change_hue(image, delta_hue):
     InvalidColorFormatError
         If the input image is not in a color format recognized by the VisuMorph package.
 
-    Example:
+    Example
+    -------
     >>> from VisuMorph import change_hue, load_image
     >>> original_image = load_image('path/to/image.jpg')
     >>> modified_image = change_hue(original_image, 45.0)
