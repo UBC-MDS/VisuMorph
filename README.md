@@ -1,6 +1,14 @@
-# visumorph
+# VisuMorph
 
-Package for image manipulations in Python
+Package for image manipulations in Python.
+
+## Contributors
+In alphabetical order:
+
+- Atabak Alishiri
+- Orix Au Yeung
+- Marco Bravo
+- Shawn Hu
 
 ## Installation
 
@@ -14,7 +22,7 @@ $ pip install visumorph
 
 ## Contributing
 
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a [Code of Conduct](CONDUCT.md). By contributing to this project, you agree to abide by its terms.
 
 ## License
 
