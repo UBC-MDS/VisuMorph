@@ -1,5 +1,5 @@
 def flip(input_file, v=0):
-    """Load image dataframe from an image file and return as an image dataframe.
+    """Load image from an image file and return as an image numpy array.
 
     Parameters
     ----------
@@ -11,7 +11,7 @@ def flip(input_file, v=0):
     Returns
     -------
     df
-        Flipped image dataframe.
+        Flipped image numpy array.
 
     Examples
     --------
