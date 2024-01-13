@@ -21,7 +21,7 @@ def flip(image, v=0):
     Examples
     --------
     >>> import visumorph
-    >>> from visumorph.flipping import flip
+    >>> from visumorph.flip import flip
     >>> img = visumorph.load_image("exampleimage.jpg")
     >>> flip("exampleimage.jpg", v=1)
     """
