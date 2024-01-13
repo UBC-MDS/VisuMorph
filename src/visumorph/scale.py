@@ -29,7 +29,7 @@ def scale(image, scale):
     Examples
     --------
     >>> import visumorph
-    >>> from visumorph.rotate import rotate
+    >>> from visumorph.scale import scale
     >>> img = visumorph.load_image("test.jpg")
     >>> scaled_img = scale(img, 1.15)
     """
