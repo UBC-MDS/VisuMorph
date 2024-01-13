@@ -16,7 +16,8 @@ def change_hue(image, delta_hue):
     Image Object: A new Image Object with the hue adjusted as per the delta_hue parameter. The returned image has the same
                   dimensions and format as the input image.
 
-    Raises:
+    Raises
+    ------
     ValueError: If delta_hue is not a float.
     TypeError: If the input image is not a valid Image Object.
     InvalidColorFormatError: If the input image is not in a color format recognized by the VisuMorph package.
