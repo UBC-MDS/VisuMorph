@@ -12,6 +12,7 @@ def flip(image, v=0):
     -------
     image
         Flipped VisuMorph image.
+        
     Raises
     ------
     TypeError
