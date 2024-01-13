@@ -31,7 +31,8 @@ def change_hue(image, delta_hue):
     >>> modified_image = change_hue(original_image, 45.0)
     >>> modified_image.save('path/to/modified_image.jpg')
 
-    Note:
+    Notes
+    -----
     The hue change wraps around the color wheel, meaning a delta_hue of 360 or -360 results in no change.
     """
     pass
