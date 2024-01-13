@@ -10,7 +10,7 @@ def flip(input_file, v=0):
 
     Returns
     -------
-    df
+    ndarray
         Flipped image numpy array.
 
     Examples
