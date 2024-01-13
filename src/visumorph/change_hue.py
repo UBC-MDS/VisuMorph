@@ -11,7 +11,8 @@ def change_hue(image, delta_hue):
     delta_hue (float): The amount by which to shift the hue component in the HSL color space. The value can be either
                        positive or negative, representing a clockwise or counterclockwise rotation of the hue, respectively.
 
-    Returns:
+    Returns
+    -------
     Image Object: A new Image Object with the hue adjusted as per the delta_hue parameter. The returned image has the same
                   dimensions and format as the input image.
 
