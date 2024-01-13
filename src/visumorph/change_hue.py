@@ -18,7 +18,8 @@ def change_hue(image, delta_hue):
 
     Raises
     ------
-    ValueError: If delta_hue is not a float.
+    ValueError
+        If delta_hue is not a float.
     TypeError
         If the input image is not a valid Image Object.
     InvalidColorFormatError
