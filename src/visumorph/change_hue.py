@@ -1,6 +1,5 @@
 def change_hue(image, delta_hue):
     """Adjusts the hue of the given image.
-    Adjusts the hue of the given image.
 
     This function modifies the hue of each pixel in the input image by the specified amount (delta_hue),
     changing the overall color composition without altering luminance or saturation.
