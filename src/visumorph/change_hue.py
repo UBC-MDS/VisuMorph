@@ -4,7 +4,8 @@ def change_hue(image, delta_hue):
     This function modifies the hue of each pixel in the input image by the specified amount (delta_hue),
     changing the overall color composition without altering luminance or saturation.
 
-    Parameters:
+    Parameters
+    ----------
     image (Image Object): The image to be processed. Must be a valid Image Object as defined in the VisuMorph package.
                           The image should be in a color format recognizable by VisuMorph (e.g., RGB).
     delta_hue (float): The amount by which to shift the hue component in the HSL color space. The value can be either
