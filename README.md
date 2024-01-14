@@ -20,7 +20,6 @@ $ pip install visumorph
 
 VisuMorph includes a variety of functions for image manipulation:
 
-- **Image Class(`Image`)**: A core class that represents images, facilitating the application of transformations and adjustments.
 - **Flipping(`flip`)**: Horizontally or vertically flip images, useful for creating mirror effects or correcting orientation.
 - **Rotating(`rotate`)**: Rotate images by a specified degree, supporting both clockwise and anticlockwise rotations.
 - **Hue Change(`change_hue`)**: Adjust the hue of images, allowing for color shifting and mood setting in visuals.
