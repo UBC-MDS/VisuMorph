@@ -1,3 +1,6 @@
+import colorsys
+
+
 def change_hue(image, delta_hue):
     """
     Adjusts the hue of a VisuMorph image.
@@ -39,4 +42,24 @@ def change_hue(image, delta_hue):
     -----
     The hue change wraps around the color wheel, meaning a delta_hue of 360 or -360 results in no change.
     """
-    pass
+
+    if not isinstance(image, Image):
+        raise TypeError("Input must be a VisuMorph Image Object.")
+
+    if not isinstance(delta_hue, float):
+        raise ValueError("delta_hue must be a float.")
+
+    try:
+        rgb_image = image.image
+    except AttributeError:
+        raise InvalidColorFormatError("Image is not in a valid color format.")
+
+    # Convert RGB to HSL, change hue, and convert back to RGB
+    hsl_image = [[colorsys.rgb_to_hls(*pixel / 255.0)
+                  for pixel in row] for row in rgb_image]
+    adjusted_hsl_image = np.array(
+        [[(h + delta_hue / 360.0) % 1.0, s, l] for h, l, s in row] for row in hsl_image)
+    adjusted_rgb_image = np.array([[int(value * 255) for value in colorsys.hls_to_rgb(*pixel)]
+                                  for pixel in row] for row in adjusted_hsl_image)
+
+    return Image(adjusted_rgb_image)
