@@ -10,8 +10,7 @@ class Image:
         self.dimensions = self.image.shape
 
     def save(self, file_path):
-        """
-        Saves the image to a file.
+        """Saves the image to a file.
 
         Parameters
         ----------
