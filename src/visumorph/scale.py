@@ -1,19 +1,24 @@
+import numpy as np
+from visumorph import Image
+from PIL import Image as PImage
+
+
 def scale(image, scale):
     """Enlarge/Shrink an image with a given scale.
 
     This function will scale a VisuMorph image by a given scale with 1.0 as
     the original scale. The final transformed image would have a dimension of
-    (scale * original_width, scale * original_height), rounded to the nearest
-    integer.
+    (scale * original_width, scale * original_height), rounded top to the
+    nearest integer.
 
     Parameters
     ----------
     image : visumorph.Image
         The original image to be scaled.
-    scale : float
+    scale : float or int
         The desired scale. The original scale of the image is 1.0.
         A scale larger than 1.0 will result in a final image having a larger
-        dimension, and vice versa.
+        dimension, and vice versa. Cannot be equal or smaller than 0.0.
 
     Returns
     -------
@@ -25,12 +30,24 @@ def scale(image, scale):
     TypeError
         If the image is not a valid VisuMorph Image and/or scale given is
         not a number.
+    ValueError
+        If the scale provided is equal 0 or is a negative number.
 
     Examples
     --------
-    >>> import visumorph
-    >>> from visumorph.scale import scale
-    >>> img = visumorph.load_image("test.jpg")
-    >>> scaled_img = scale(img, 1.15)
+    >>> import visumorph as vm
+    >>> img = vm.load_image("test.jpg")
+    >>> scaled_img = vm.scale(img, 1.15)
     """
-    pass
+    if not type(scale) in (float, int):
+        raise TypeError("The scale provided must be a number.")
+
+    if scale <= 0:
+        raise ValueError("The scale provided must be a positive, non-zero "
+                         "number.")
+
+    img = PImage.fromarray(image.image)
+    new_h, new_w = np.ceil(img.get_dimensions()[:2] * scale)
+    img.resize(scale, )
+
+    return Image()
