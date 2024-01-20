@@ -7,11 +7,12 @@ class Image:
 
     def __init__(self, image):
         self.image = image
-        self.dimensions = self.image.shape
+
+    def get_dimensions(self):
+        return self.image.shape
 
     def save(self, file_path):
-        """
-        Saves the image to a file.
+        """Saves the image to a file.
 
         Parameters
         ----------
@@ -21,6 +22,9 @@ class Image:
         # Convert the image data to a Pillow Image and save it to the specified path
         pil_image = PImage.fromarray(self.image)
         pil_image.save(file_path)
+
+    def __repr__(self):
+        return f"VisuMorph Image, dimensions: {self.dimensions}"
 
 
 def load_image(image_path):

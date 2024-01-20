@@ -14,6 +14,7 @@ def change_hue(image, color="white", delta_hue=0.5):
     adjusted_image = PImage.blend(im, layer, delta_hue)
     adjusted_image_np = np.array(adjusted_image)
 
+
     return VImage(adjusted_image_np)
 
 my_image = load_image('tests/img/raw/meme.jpg')
