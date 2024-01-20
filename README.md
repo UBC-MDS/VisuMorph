@@ -12,8 +12,17 @@ In alphabetical order:
 
 ## Installation
 
+Currently, this package is not published on PyPI. Installation would be for 
+development purposes only.
+
+To install, we recommend to use conda to create a separate environment:
+
 ```bash
-$ pip install visumorph
+git clone https://github.com/UBC-MDS/VisuMorph.git && \
+cd VisuMorph && \
+conda env create -f environment.yml -y && \
+conda activate visumorph && \
+poetry install
 ```
 
 ## Features
@@ -24,6 +33,12 @@ VisuMorph includes a variety of functions for image manipulation:
 - **Rotating(`rotate`)**: Rotate images by a specified degree, supporting both clockwise and anticlockwise rotations.
 - **Hue Change(`change_hue`)**: Adjust the hue of images, allowing for color shifting and mood setting in visuals.
 - **Scaling(`scale`)**: Resize images, either uniformly or non-uniformly, without losing the essence of the visual content.
+
+## Run the Tests
+
+```bash
+pytest
+```
 
 ## Position in the Python Ecosystem
 
