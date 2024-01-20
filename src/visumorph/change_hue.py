@@ -1,6 +1,8 @@
+from PIL import Image as PImage
+
+
 def change_hue(image, delta_hue):
-    """
-    Adjusts the hue of a VisuMorph image.
+    """Adjusts the hue of a VisuMorph image.
 
     This function changes the hue of each pixel in the input VisuMorph image by a specified amount (delta_hue),
     altering the overall color composition without affecting luminance or saturation.
@@ -39,4 +41,15 @@ def change_hue(image, delta_hue):
     -----
     The hue change wraps around the color wheel, meaning a delta_hue of 360 or -360 results in no change.
     """
-    pass
+
+    # TODO: convert the current code to conform with last weeks' docstring
+
+    im = PImage.open(image_path)
+    layer = PImage.new("RGB", im.size, color)
+    adjusted_image = PImage.blend(im, layer, delta_hue)
+    output_dir = "tests/img/results/" + output_name + ".png"
+    adjusted_image.save(output_dir, "PNG")
+
+
+if __name__ == "__main__":
+    change_hue()
