@@ -1,23 +1,47 @@
 from visumorph import Image as VImage
-from visumorph import load_image
-import numpy as np
 from PIL import Image as PImage
+import numpy as np
 
 
-def change_hue(image, color="white", delta_hue=0.5):
+def change_hue(image, color="white", delta_hue=1):
+    """
+    Change the hue of a VisuMorph Image object by blending it with a layer of specified color.
 
-    if type(image) != VImage:
+    Parameters
+    ----------
+    image : VImage
+        A VisuMorph Image object whose hue is to be changed.
+    color : str, optional
+        The color used for the blending layer (default is "white").
+    delta_hue : float, optional
+        The degree of blending with the color layer. A value of 0 means no change,
+        and 1 means complete replacement with the color layer (default is 1).
+
+    Returns
+    -------
+    VImage
+        A new VisuMorph Image object with the modified hue.
+
+    Raises
+    ------
+    TypeError
+        If the input is not a valid VisuMorph Image object.
+    """
+
+    if not isinstance(image, VImage):
         raise TypeError("The image is not a valid VisuMorph Image object")
-    
-    im = PImage.fromarray(image)
+
+    # Convert the VisuMorph Image to a PIL Image for processing
+    im = PImage.fromarray(image.image, mode="RGB")
+
+    # Create a solid color layer for blending
     layer = PImage.new("RGB", im.size, color)
+
+    # Blend the original image with the color layer
     adjusted_image = PImage.blend(im, layer, delta_hue)
+
+    # Convert the adjusted PIL Image back to a NumPy array
     adjusted_image_np = np.array(adjusted_image)
 
-
+    # Return a new VisuMorph Image object
     return VImage(adjusted_image_np)
-
-my_image = load_image('tests/img/raw/meme.jpg')
-changed_img = change_hue(my_image)
-to_show = PImage.fromarray(changed_img)
-to_show.save("tests/img/results/new_adjusted.png", "PNG")
