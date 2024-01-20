@@ -13,7 +13,7 @@ def change_hue(image, color="white", delta_hue=1):
         A VisuMorph Image object whose hue is to be changed.
     color : str, optional
         The color used for the blending layer (default is "white").
-    delta_hue : float, optional
+    delta_hue : float or int, optional
         The degree of blending with the color layer. A value of 0 means no change,
         and 1 means complete replacement with the color layer (default is 1).
 
@@ -26,10 +26,15 @@ def change_hue(image, color="white", delta_hue=1):
     ------
     TypeError
         If the input is not a valid VisuMorph Image object.
+    ValueError
+        If 'delta_hue' is not a number.
     """
 
     if not isinstance(image, VImage):
         raise TypeError("The image is not a valid VisuMorph Image object")
+    
+    if not isinstance(delta_hue, (int, float)):
+        raise ValueError("delta_hue must be a numeric value")
 
     # Convert the VisuMorph Image to a PIL Image for processing
     im = PImage.fromarray(image.image, mode="RGB")
