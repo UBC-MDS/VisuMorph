@@ -7,11 +7,12 @@ class Image:
 
     def __init__(self, image):
         self.image = image
-        self.dimensions = self.image.shape
+
+    def get_dimensions(self):
+        return self.image.shape
 
     def save(self, file_path):
-        """
-        Saves the image to a file.
+        """Saves the image to a file.
 
         Parameters
         ----------
