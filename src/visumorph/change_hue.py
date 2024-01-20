@@ -1,55 +1,58 @@
+from visumorph import Image as VImage
 from PIL import Image as PImage
+import numpy as np
 
 
-def change_hue(image, delta_hue):
-    """Adjusts the hue of a VisuMorph image.
-
-    This function changes the hue of each pixel in the input VisuMorph image by a specified amount (delta_hue),
-    altering the overall color composition without affecting luminance or saturation.
+def change_hue(image, color="white", delta_hue=1):
+    """
+    Change the hue of a VisuMorph Image object by blending it with a layer of specified color.
 
     Parameters
     ----------
     image : visumorph.Image
-        The image to be processed. Must be a valid VisuMorph Image Object.
-        The image should be in a color format recognizable by VisuMorph (e.g., RGB).
-    delta_hue : float
-        The degree by which to shift the hue component in the HSL color space. The value can be
-        either positive or negative, representing clockwise or counterclockwise rotation of the hue, respectively.
+        A VisuMorph Image object whose hue is to be changed.
+    color : str, optional
+        The color used for the blending layer (default is "white").
+    delta_hue : float or int, optional
+        The degree of blending with the color layer. A value of 0 means no change,
+        and 1 means complete replacement with the color layer (default is 1).
 
     Returns
     -------
-    image
-        The VisuMorph Image with adjusted hue.
+    VImage : visumorph.Image
+        A new VisuMorph Image object with the modified hue.
 
     Raises
     ------
-    ValueError
-        If delta_hue is not a float.
     TypeError
-        If the input image is not a valid VisuMorph Image Object.
-    InvalidColorFormatError
-        If the input image is not in a color format recognized by VisuMorph.
+        If the input is not a valid VisuMorph Image object.
+    ValueError
+        If 'delta_hue' is not a number.
 
     Examples
     --------
-    >>> import visumorph
-    >>> from visumorph.change_hue import change_hue
-    >>> img = visumorph.load_image("example.jpg")
-    >>> hue_changed_img = change_hue(img, 45.0)
-
-    Notes
-    -----
-    The hue change wraps around the color wheel, meaning a delta_hue of 360 or -360 results in no change.
+    >>> import visumorph as vm
+    >>> img = vm.load_image("test.jpg")
+    >>> hue_changed = vm.change_hue(img)
     """
 
-    # TODO: convert the current code to conform with last weeks' docstring
+    if not isinstance(image, VImage):
+        raise TypeError("The image is not a valid VisuMorph Image object")
+    
+    if not isinstance(delta_hue, (int, float)):
+        raise ValueError("delta_hue must be a numeric value")
 
-    im = PImage.open(image_path)
+    # Convert the VisuMorph Image to a PIL Image for processing
+    im = PImage.fromarray(image.image, mode="RGB")
+
+    # Create a solid color layer for blending
     layer = PImage.new("RGB", im.size, color)
+
+    # Blend the original image with the color layer
     adjusted_image = PImage.blend(im, layer, delta_hue)
-    output_dir = "tests/img/results/" + output_name + ".png"
-    adjusted_image.save(output_dir, "PNG")
 
+    # Convert the adjusted PIL Image back to a NumPy array
+    adjusted_image_np = np.array(adjusted_image)
 
-if __name__ == "__main__":
-    change_hue()
+    # Return a new VisuMorph Image object
+    return VImage(adjusted_image_np)
