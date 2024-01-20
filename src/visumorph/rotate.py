@@ -1,3 +1,9 @@
+from Image import Image
+
+import numpy as np
+from PIL import Image as PImage
+
+
 def rotate(image, rotation, background=None):
     """Rotate an image with a given rotation.
 
@@ -26,6 +32,7 @@ def rotate(image, rotation, background=None):
     TypeError
         If the image is not a valid VisuMorph Image and/or rotation given is
         not a number.
+    V
 
     Examples
     --------
@@ -34,4 +41,46 @@ def rotate(image, rotation, background=None):
     >>> img = visumorph.load_image("test.jpg")
     >>> rotated_45_img = rotate(img, 45.0)
     """
-    pass
+
+    if type(image) != Image:
+        raise TypeError("The image is not a valid VisuMorph Image object")
+
+    if background and type(background) != Image:
+        raise TypeError("The background image is not a valid VisuMorph Image "
+                        "object")
+
+    if not type(rotation) in (float, int):
+        raise TypeError("The rotation degree must be a float or an integer")
+
+    # minimum size of the pre-rotation image to cover
+    min_len = np.ceil(np.hypot(*image.dimensions[0:2])).astype(int)
+
+    min_dim_rgb = (min_len, min_len, 3)
+
+    if background is None:
+        bg_arr = np.zeros(min_dim_rgb)
+    else:
+        # calculate the number of times the bg image to be repeated (tiled)
+        num_tiles = np.max(np.ceil(min_len / background.image.shape[0:2])).astype(int)
+        # tile it!
+        bg_arr = np.tile(background.image, (num_tiles, num_tiles, 1))
+        # crop it back to min_dim_rgb
+        bg_arr = bg_arr[:min_len, :min_len]
+
+    bg_img = PImage.fromarray(bg_arr.astype(np.uint8), mode="RGB")
+
+    # putting the image at the center of the prepared background image
+    x_start = (min_len - image.image.shape[1]) // 2
+    y_start = (min_len - image.image.shape[0]) // 2
+    bg_img.paste(
+        PImage.fromarray(image.image, mode="RGB"),
+        box=(x_start, y_start)
+    )
+
+    rotated = np.array(bg_img.rotate(-rotation))
+
+    # crop image back to its original size
+    image.image = rotated[y_start:y_start+image.image.shape[0],
+                  x_start:x_start+image.image.shape[1]]
+
+    return image
