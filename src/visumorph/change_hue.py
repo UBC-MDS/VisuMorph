@@ -9,7 +9,7 @@ def change_hue(image, color="white", delta_hue=1):
 
     Parameters
     ----------
-    image : VImage
+    image : visumorph.Image
         A VisuMorph Image object whose hue is to be changed.
     color : str, optional
         The color used for the blending layer (default is "white").
@@ -19,7 +19,7 @@ def change_hue(image, color="white", delta_hue=1):
 
     Returns
     -------
-    VImage
+    VImage : visumorph.Image
         A new VisuMorph Image object with the modified hue.
 
     Raises
@@ -28,6 +28,12 @@ def change_hue(image, color="white", delta_hue=1):
         If the input is not a valid VisuMorph Image object.
     ValueError
         If 'delta_hue' is not a number.
+
+    Examples
+    --------
+    >>> import visumorph as vm
+    >>> img = vm.load_image("test.jpg")
+    >>> hue_changed = vm.change_hue(img)
     """
 
     if not isinstance(image, VImage):
