@@ -1,4 +1,4 @@
-from Image import Image
+from visumorph import Image
 
 import numpy as np
 from PIL import Image as PImage
@@ -36,16 +36,15 @@ def rotate(image, rotation, background=None):
 
     Examples
     --------
-    >>> import visumorph
-    >>> from visumorph.rotate import rotate
-    >>> img = visumorph.load_image("test.jpg")
-    >>> rotated_45_img = rotate(img, 45.0)
+    >>> import visumorph as vm
+    >>> img = vm.load_image("test.jpg")
+    >>> rotated_45_img = vm.rotate(img, 45.0)
     """
 
     if type(image) != Image:
         raise TypeError("The image is not a valid VisuMorph Image object")
 
-    if background and type(background) != Image:
+    if background is not None and type(background) != Image:
         raise TypeError("The background image is not a valid VisuMorph Image "
                         "object")
 
@@ -53,7 +52,7 @@ def rotate(image, rotation, background=None):
         raise TypeError("The rotation degree must be a float or an integer")
 
     # minimum size of the pre-rotation image to cover
-    min_len = np.ceil(np.hypot(*image.dimensions[0:2])).astype(int)
+    min_len = np.ceil(np.hypot(*image.image.shape[0:2])).astype(int)
 
     min_dim_rgb = (min_len, min_len, 3)
 
@@ -80,7 +79,7 @@ def rotate(image, rotation, background=None):
     rotated = np.array(bg_img.rotate(-rotation))
 
     # crop image back to its original size
-    image.image = rotated[y_start:y_start+image.image.shape[0],
+    rotated = rotated[y_start:y_start+image.image.shape[0],
                   x_start:x_start+image.image.shape[1]]
 
-    return image
+    return Image(rotated)
