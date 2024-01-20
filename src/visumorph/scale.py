@@ -17,7 +17,7 @@ def scale(image, scale):
 
     Returns
     -------
-    image
+    visumorph.Image
         The VisuMorph Image scaled.
 
     Raises
@@ -33,4 +33,16 @@ def scale(image, scale):
     >>> img = visumorph.load_image("test.jpg")
     >>> scaled_img = scale(img, 1.15)
     """
-    pass
+    if not isinstance(image, visumorph.Image):
+        raise TypeError("Input 'image' must be a valid VisuMorph Image.")
+    if not isinstance(scale, (int, float)):
+        raise TypeError("Input 'scale' must be a number.")
+
+    # Calculate new dimensions
+    new_width = round(image.width * scale)
+    new_height = round(image.height * scale)
+
+    # Scale the image
+    scaled_image = image.resize((new_width, new_height))
+
+    return scaled_image

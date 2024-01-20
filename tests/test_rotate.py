@@ -1,4 +1,4 @@
-from visumorph import rotate, load_image
+from visumorph import scale, load_image
 import numpy as np
 from PIL import Image as PImage
 import pytest
