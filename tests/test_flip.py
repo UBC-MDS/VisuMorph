@@ -1,5 +1,5 @@
 from visumorph.flip import flip
-from visumorph import load_image
+from visumorph.Image import load_image
 import numpy as np
 import pytest
 import os
