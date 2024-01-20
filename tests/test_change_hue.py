@@ -3,8 +3,6 @@ import pytest
 from visumorph import Image as VImage
 from visumorph import load_image
 import numpy as np
-from PIL import Image as PImage
-
 
 TEST_IMAGE_PATH = "tests/img/raw/meme.jpg"
 
