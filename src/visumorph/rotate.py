@@ -40,10 +40,10 @@ def rotate(image, rotation, background=None):
     >>> rotated_45_img = vm.rotate(img, 45.0)
     """
 
-    if type(image) != Image:
+    if not isinstance(image, Image):
         raise TypeError("The image is not a valid VisuMorph Image object")
 
-    if background is not None and type(background) != Image:
+    if background is not None and not isinstance(background, Image):
         raise TypeError("The background image is not a valid VisuMorph Image "
                         "object")
 
