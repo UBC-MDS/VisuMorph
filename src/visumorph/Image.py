@@ -23,6 +23,9 @@ class Image:
         pil_image = PImage.fromarray(self.image)
         pil_image.save(file_path)
 
+    def __repr__(self):
+        return f"VisuMorph Image, dimensions: {self.dimensions}"
+
 
 def load_image(image_path):
     """Load an image from filesystem and return an Image object.
