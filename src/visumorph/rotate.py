@@ -32,7 +32,6 @@ def rotate(image, rotation, background=None):
     TypeError
         If the image is not a valid VisuMorph Image and/or rotation given is
         not a number.
-    V
 
     Examples
     --------
