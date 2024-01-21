@@ -29,10 +29,13 @@ poetry install
 
 VisuMorph includes a variety of functions for image manipulation:
 
-- **Flipping(`flip`)**: Horizontally or vertically flip images, useful for creating mirror effects or correcting orientation.
-- **Rotating(`rotate`)**: Rotate images by a specified degree, supporting both clockwise and anticlockwise rotations.
-- **Hue Change(`change_hue`)**: Adjust the hue of images, allowing for color shifting and mood setting in visuals.
-- **Scaling(`scale`)**: Resize images, either uniformly or non-uniformly, without losing the essence of the visual content.
+- **Flipping(`flip`)**: Empower your image manipulation endeavors by seamlessly flipping images either horizontally or vertically. This versatile tool serves a multitude of purposes, ranging from crafting captivating mirrored effects to rectifying image orientations with precision.
+
+- **Rotating(`rotate`)**: Elevate your visual content with the ability to elegantly rotate images by precise angles, accommodating both clockwise and counterclockwise rotations. This feature adds a touch of sophistication to your image editing toolkit, allowing you to fine-tune the orientation of your visuals effortlessly.
+
+- **Hue Change(`change_hue`)**: Harness the power of color transformation as you adjust the hue of your images. This functionality provides you with the creative freedom to shift and manipulate colors, enabling you to set distinct moods and evoke specific emotions within your visual compositions.
+
+- **Flipping(`flip`)**: Unlock the potential to resize images in a highly customizable manner, ensuring that the essence and visual integrity remain intact. Whether you require uniform or non-uniform adjustments, this scaling feature empowers you to tailor your images to your exact specifications, preserving their core visual appeal.
 
 ## Run the Tests
 
@@ -42,7 +45,7 @@ pytest
 
 ## Position in the Python Ecosystem
 
-VisuMorph, while a robust tool for image manipulation, is designed primarily as an educational project for the 524 course in the Master of Data Science program. It serves as an introductory tool for those beginning their journey in data science and image processing. While it offers a range of functionalities, it is more limited in scope compared to professional-grade packages like PIL (Python Imaging Library) and OpenCV. These larger libraries offer a wider range of complex functionalities and are suited for industrial applications. However, VisuMorph stands out for its simplicity and ease of use, making it an excellent starting point for students and hobbyists looking to understand the basics of image manipulation in Python.
+VisuMorph, although a robust tool for image manipulation, primarily serves as an educational project within the context of the Master of Data Science program's 524 course. It functions as a foundational tool for individuals embarking on their journey in the fields of data science and image processing. While it provides a variety of capabilities, its scope is more limited in comparison to professional-grade libraries such as PIL (Python Imaging Library) and OpenCV. These larger libraries offer a broader range of intricate functionalities tailored for industrial applications. Nevertheless, VisuMorph distinguishes itself through its simplicity and user-friendliness, making it an exceptional starting point for students and enthusiasts seeking to grasp the fundamental concepts of image manipulation in the Python programming language.
 
 For reference to more advanced libraries, you can visit:
 - PIL (Python Imaging Library): [PIL](https://python-pillow.org/)
