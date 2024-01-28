@@ -1,6 +1,17 @@
 # VisuMorph
 
+[![Documentation Status](https://readthedocs.org/projects/visumorph/badge/?version=latest)](https://visumorph.readthedocs.io/en/latest/?badge=latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 VisuMorph is a powerful, user-friendly Python package designed for image manipulation. It simplifies image processing tasks, allowing users to effortlessly apply transformations and adjustments to their images. With its intuitive interface and a wide range of functionalities, VisuMorph is ideal for both hobbyists and professionals looking to enhance their digital imagery.
+
+## Documentation
+
+The full documentation including installation guides, example usages, and 
+API references is hosted on ReadTheDocs and can be found here: 
+
+https://visumorph.readthedocs.io/en/latest/
+
 
 ## Contributors
 In alphabetical order:
@@ -50,7 +61,9 @@ For reference to more advanced libraries, you can visit:
 
 ## Contributing
 
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a [Code of Conduct](CONDUCT.md). By contributing to this project, you agree to abide by its terms.
+Interested in contributing? Check out the contributing guidelines. Please 
+note that this project is released with a [Code of Conduct](./CONDUCT.md). 
+By contributing to this project, you agree to abide by its terms.
 
 ## License
 
