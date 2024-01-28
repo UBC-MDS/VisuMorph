@@ -15,6 +15,7 @@ numpy = "^1.26.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.4"
+jupyter = "^1.0.0"
 
 [tool.semantic_release]
 version_variable = "pyproject.toml:version" # version location
