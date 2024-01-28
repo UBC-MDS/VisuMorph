@@ -1,5 +1,7 @@
 # VisuMorph
 
+![](./docs/logo.png)
+
 [![GitHub Release](https://img.shields.io/github/release/ubc-mds/visumorph.svg?style=flat)]()
 [![GitHub Activity](https://img.shields.io/github/last-commit/ubc-mds/visumorph/main.svg?style=flat)]()
 [![Documentation Status](https://readthedocs.org/projects/visumorph/badge/?version=latest)](https://visumorph.readthedocs.io/en/latest/?badge=latest)
