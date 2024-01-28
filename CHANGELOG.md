@@ -2,6 +2,17 @@
 
 <!--next-version-placeholder-->
 
+## v2.0.0 (28/01/2024)
+
+Second major release of visumorph!
+
+### What's Changed
+
+- Created detailed guides on installing and using the library
+- Modified configuration files for ReadTheDocs hosting
+- Added missing dependencies for sphinx and code coverages
+
+
 ## v1.0.0 (20/01/2024)
 
 First major release of visumorph!
