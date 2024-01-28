@@ -1,6 +1,6 @@
 # VisuMorph
 
-![](./docs/logo.png)
+![](https://raw.githubusercontent.com/UBC-MDS/VisuMorph/main/docs/logo.png)
 
 [![GitHub Release](https://img.shields.io/github/release/ubc-mds/visumorph.svg?style=flat)]()
 [![GitHub Activity](https://img.shields.io/github/last-commit/ubc-mds/visumorph/main.svg?style=flat)]()
