@@ -13,6 +13,16 @@ numpy = "^1.26.3"
 
 [tool.poetry.dev-dependencies]
 
+{% if cookiecutter.include_github_actions == 'ci+cd' -%}
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version",
+]                                                    # version location
+branch = "main"                                      # branch to make releases of
+changelog_file = "CHANGELOG.md"                      # changelog file
+build_command = "pip install poetry && poetry build" # build dists 
+{% endif %}
+
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.4"
 pytest-cov = "^4.1.0"
