@@ -13,7 +13,7 @@ numpy = "^1.26.3"
 
 [tool.poetry.dev-dependencies]
 
-{% if cookiecutter.include_github_actions == 'ci+cd' -%}
+{% if visumorph.include_github_actions == 'ci+cd' -%}
 [tool.semantic_release]
 version_toml = [
     "pyproject.toml:tool.poetry.version",
