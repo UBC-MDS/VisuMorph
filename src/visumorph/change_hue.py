@@ -38,7 +38,7 @@ def change_hue(image, color="white", delta_hue=1):
 
     if not isinstance(image, VImage):
         raise TypeError("The image is not a valid VisuMorph Image object")
-    
+
     if not isinstance(delta_hue, (int, float)):
         raise ValueError("delta_hue must be a numeric value")
 

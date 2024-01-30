@@ -6,9 +6,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u"visumorph"
-copyright = u"2024, Orix Au Yeung, Marco Bravo, Atabak Alishiri, Shawn Hu"
-author = u"Orix Au Yeung, Marco Bravo, Atabak Alishiri, Shawn Hu"
+project = "visumorph"
+copyright = "2024, Orix Au Yeung, Marco Bravo, Atabak Alishiri, Shawn Hu"
+author = "Orix Au Yeung, Marco Bravo, Atabak Alishiri, Shawn Hu"
 
 # -- General configuration ---------------------------------------------------
 

@@ -44,8 +44,7 @@ def rotate(image, rotation, background=None):
         raise TypeError("The image is not a valid VisuMorph Image object")
 
     if background is not None and not isinstance(background, Image):
-        raise TypeError("The background image is not a valid VisuMorph Image "
-                        "object")
+        raise TypeError("The background image is not a valid VisuMorph Image object")
 
     if not type(rotation) in (float, int):
         raise TypeError("The rotation degree must be a float or an integer")
@@ -70,15 +69,14 @@ def rotate(image, rotation, background=None):
     # putting the image at the center of the prepared background image
     x_start = (min_len - image.image.shape[1]) // 2
     y_start = (min_len - image.image.shape[0]) // 2
-    bg_img.paste(
-        PImage.fromarray(image.image, mode="RGB"),
-        box=(x_start, y_start)
-    )
+    bg_img.paste(PImage.fromarray(image.image, mode="RGB"), box=(x_start, y_start))
 
     rotated = np.array(bg_img.rotate(-rotation))
 
     # crop image back to its original size
-    rotated = rotated[y_start:y_start+image.image.shape[0],
-                  x_start:x_start+image.image.shape[1]]
+    rotated = rotated[
+        y_start : y_start + image.image.shape[0],
+        x_start : x_start + image.image.shape[1],
+    ]
 
     return Image(rotated)
