@@ -13,14 +13,6 @@ numpy = "^1.26.3"
 
 [tool.poetry.dev-dependencies]
 
-[tool.semantic_release]
-version_toml = [
-    "pyproject.toml:tool.poetry.version",
-]                                                    # version location
-branch = "main"                                      # branch to make releases of
-changelog_file = "CHANGELOG.md"                      # changelog file
-build_command = "pip install poetry && poetry build" # build dists 
-
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.4"
 pytest-cov = "^4.1.0"
@@ -40,6 +32,10 @@ upload_to_release = true                    # auto-create GitHub release
 upload_to_pypi = false                      # don't auto-upload to PyPI
 remove_dist = false                         # don't remove dists
 patch_without_tag = true                    # patch release by default
+build_command = "pip install poetry && poetry build" # build dists 
+version_toml = [
+    "pyproject.toml:tool.poetry.version",
+]                                                    # version location
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
