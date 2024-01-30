@@ -2,6 +2,33 @@
 
 
 
+## v2.0.2 (2024-01-30)
+
+### Documentation
+
+* docs: add codecov badge to `README.md` (#87) ([`18b3e73`](https://github.com/UBC-MDS/VisuMorph/commit/18b3e7320eccd61c0703335f3542d15e3b693a10))
+
+### Fix
+
+* fix: Add linter to the cicd pipeline and black as dev dependency (#88)
+
+* build: add black as dev dependency
+
+* add linter to action
+
+* style: lint codes i.a.w. black
+
+* style: lint codes i.a.w. black ([`a82a208`](https://github.com/UBC-MDS/VisuMorph/commit/a82a20806b4c3dcdd28125bcd190cb1cb3a8868a))
+
+### Unknown
+
+* Fix: Change the installation instruction to use PyPI (#86)
+
+* docs: change install medium from `poetry` to `pip`
+
+* remove deprecated conda environment file ([`df697c5`](https://github.com/UBC-MDS/VisuMorph/commit/df697c50f190d8e6f215478c1b0314bc451f894f))
+
+
 ## v2.0.1 (2024-01-30)
 
 ### Build
