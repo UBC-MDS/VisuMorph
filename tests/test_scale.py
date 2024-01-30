@@ -9,8 +9,9 @@ def test_scale_can_produce_a_larger_image():
     original_size = np.array(img.get_dimensions()[:2])
     resized = vm.scale(img, 2.0)
     new_size = resized.get_dimensions()[:2]
-    assert np.array_equal(new_size, original_size * 2), \
-        "The scaled image does not have the expected dimensions!"
+    assert np.array_equal(
+        new_size, original_size * 2
+    ), "The scaled image does not have the expected dimensions!"
 
 
 def test_scale_can_produce_a_smaller_image():
@@ -18,8 +19,9 @@ def test_scale_can_produce_a_smaller_image():
     original_size = np.array(img.get_dimensions()[:2])
     resized = vm.scale(img, 0.01)
     new_size = resized.get_dimensions()[:2]
-    assert np.array_equal(new_size, np.ceil(original_size * 0.01)), \
-        "The scaled image does not have the expected dimensions!"
+    assert np.array_equal(
+        new_size, np.ceil(original_size * 0.01)
+    ), "The scaled image does not have the expected dimensions!"
 
 
 def test_zero_scale_should_return_error():

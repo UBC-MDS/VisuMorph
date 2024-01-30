@@ -27,11 +27,14 @@ def test_change_hue_raises_type_error_on_invalid_input():
 def test_change_hue_uses_default_values_correctly():
     sample_image = load_image(TEST_IMAGE_PATH)
     result = change_hue(sample_image)
-    assert result.image[(1,1,1)] == (np.ones((414,552,3)) * 255)[(1,1,1)], "Default values are not working"
+    assert (
+        result.image[(1, 1, 1)] == (np.ones((414, 552, 3)) * 255)[(1, 1, 1)]
+    ), "Default values are not working"
 
 
 def test_change_hue_applies_specified_color_correctly():
     sample_image = load_image(TEST_IMAGE_PATH)
     result = change_hue(sample_image, color="black")
-    assert result.image[(1,1,1)] == (np.zeros((414,552,3)) * 255)[(1,1,1)], "Different colors are not working"
-
+    assert (
+        result.image[(1, 1, 1)] == (np.zeros((414, 552, 3)) * 255)[(1, 1, 1)]
+    ), "Different colors are not working"
