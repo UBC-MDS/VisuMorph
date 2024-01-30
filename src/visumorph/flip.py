@@ -1,5 +1,6 @@
 from visumorph import Image
 
+
 def flip(image, v=0):
     """Flip image vertically or horizontally.
 
@@ -14,7 +15,7 @@ def flip(image, v=0):
     -------
     image
         Flipped VisuMorph image.
-        
+
     Raises
     ------
     TypeError
@@ -32,7 +33,9 @@ def flip(image, v=0):
         raise TypeError("The image is not a valid VisuMorph Image object")
 
     if v not in (0, 1):
-        raise TypeError("Invalid value for 'v'. Use 0 for horizontal flip or 1 for vertical flip.")
+        raise TypeError(
+            "Invalid value for 'v'. Use 0 for horizontal flip or 1 for vertical flip."
+        )
 
     flipped = image.image.copy()
 

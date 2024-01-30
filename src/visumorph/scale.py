@@ -41,19 +41,16 @@ def scale(image, scale):
     """
 
     if not isinstance(image, Image):
-        raise TypeError("The provided image must be a valid VisuMorph Image "
-                        "object.")
+        raise TypeError("The provided image must be a valid VisuMorph Image object.")
 
     if not type(scale) in (float, int):
         raise TypeError("The scale provided must be a number.")
 
     if scale <= 0:
-        raise ValueError("The scale provided must be a positive, non-zero "
-                         "number.")
+        raise ValueError("The scale provided must be a positive, non-zero number.")
 
     img = PImage.fromarray(image.image)
-    new_h, new_w = np.ceil(np.array(image.get_dimensions()[:2]) *
-                           scale).astype(int)
+    new_h, new_w = np.ceil(np.array(image.get_dimensions()[:2]) * scale).astype(int)
     resized = img.resize((new_w, new_h))
 
     return Image(np.array(resized))
