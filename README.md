@@ -27,17 +27,10 @@ In alphabetical order:
 
 ## Installation
 
-Currently, this package is not published on PyPI. Installation would be for 
-development purposes only.
-
-To install, we recommend to use conda to create a separate environment:
+Currently, the package is published on PyPI. To install the package, run the following command:
 
 ```bash
-git clone https://github.com/UBC-MDS/VisuMorph.git && \
-cd VisuMorph && \
-conda env create -f environment.yml -y && \
-conda activate visumorph && \
-poetry install
+pip install visumorph
 ```
 
 ## Features
