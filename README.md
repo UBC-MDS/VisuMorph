@@ -47,7 +47,7 @@ For those interested in contributing or exploring the development version, pleas
 
 2. Navigate to the cloned directory and install the package in editable mode along with the development dependencies:
    ```bash
-   pip install -e ".[dev]"
+   pip install -e .
    ```
 
 
