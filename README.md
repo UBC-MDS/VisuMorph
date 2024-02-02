@@ -106,7 +106,7 @@ import visumorph as vm
 img = vm.load_image("path/to/image.jpg")
 
 # Change the hue of the image
-hue_changed_img = vm.change_hue(img, delta_hue=30)
+hue_changed_img = vm.change_hue(img, delta_hue=0.3)
 
 # Save the hue-changed image
 hue_changed_img.save("path/to/hue_changed_image.jpg")
