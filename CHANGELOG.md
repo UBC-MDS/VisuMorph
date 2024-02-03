@@ -2,6 +2,31 @@
 
 
 
+## v2.1.0 (2024-02-03)
+
+### Documentation
+
+* docs: formatting; fix incorrect example ([`67ef804`](https://github.com/UBC-MDS/VisuMorph/commit/67ef80452fd29d15e6c53a2b1ad43363ce48399c))
+
+### Feature
+
+* feat: add wrapper method for scale, flip, rotate, and change_hue for `Image` ([`277a9b6`](https://github.com/UBC-MDS/VisuMorph/commit/277a9b688b413bb2b689513a60777ea71fb1c0b0))
+
+### Style
+
+* style: lint the tests ([`c627ea9`](https://github.com/UBC-MDS/VisuMorph/commit/c627ea91b62ea422d9ffb600c445ea2057a5f897))
+
+### Unknown
+
+* Merge pull request #106 from UBC-MDS/97-create-class-methods-to-use-flip-rotate-scale-and-change_hue-in-place
+
+Create class methods to use flip rotate scale and change hue in place ([`98bcadf`](https://github.com/UBC-MDS/VisuMorph/commit/98bcadf02199ae85d24bc24805d227599a09ac73))
+
+* add test for image saving ([`3f9ad2b`](https://github.com/UBC-MDS/VisuMorph/commit/3f9ad2b9bd39ca68ed24aba660221e4ded7d8110))
+
+* add tests for Image&#39;s wrapper methods ([`2bca4d2`](https://github.com/UBC-MDS/VisuMorph/commit/2bca4d20eb07f4b013b3a704ce51c3b80807b75a))
+
+
 ## v2.0.6 (2024-02-03)
 
 ### Fix
