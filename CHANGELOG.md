@@ -2,6 +2,15 @@
 
 
 
+## v2.1.1 (2024-02-03)
+
+### Fix
+
+* fix: replace outdated github action (#108)
+
+* fix: replace outdated github action ([`47cdfbf`](https://github.com/UBC-MDS/VisuMorph/commit/47cdfbf46a440b9860b637963d863579abac7700))
+
+
 ## v2.1.0 (2024-02-03)
 
 ### Documentation
