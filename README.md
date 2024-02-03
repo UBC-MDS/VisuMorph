@@ -3,12 +3,12 @@
 ![](https://raw.githubusercontent.com/UBC-MDS/VisuMorph/main/docs/logo.png)
 
 [![GitHub Release](https://img.shields.io/github/release/ubc-mds/visumorph.svg?style=flat)]()
+[![PyPI - Version](https://img.shields.io/pypi/v/visumorph)](https://pypi.org/project/visumorph/)
 [![GitHub Activity](https://img.shields.io/github/last-commit/ubc-mds/visumorph/main.svg?style=flat)]()
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Documentation Status](https://readthedocs.org/projects/visumorph/badge/?version=latest)](https://visumorph.readthedocs.io/en/latest/?badge=latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![codecov](https://codecov.io/github/UBC-MDS/VisuMorph/graph/badge.svg?token=rnxgkcvwda)](https://codecov.io/github/UBC-MDS/VisuMorph)
-[![PyPI - Version](https://img.shields.io/pypi/v/visumorph)](https://pypi.org/project/visumorph/)
 
 VisuMorph is a powerful, user-friendly Python package designed for image manipulation. It simplifies image processing tasks, allowing users to effortlessly apply transformations and adjustments to their images. With its intuitive interface and a wide range of functionalities, VisuMorph is ideal for both hobbyists and professionals looking to enhance their digital imagery.
 
