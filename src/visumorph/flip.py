@@ -26,7 +26,7 @@ def flip(image, v=0):
     >>> import visumorph
     >>> from visumorph.flip import flip
     >>> img = visumorph.load_image("exampleimage.jpg")
-    >>> flip("exampleimage.jpg", v=1)
+    >>> flip(img, v=1)
     """
 
     if not isinstance(image, Image):
