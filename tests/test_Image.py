@@ -14,6 +14,16 @@ def test_it_loads_png():
     assert img.get_dimensions() == (480, 640, 4)
 
 
+def test_it_can_save_image(tmp_path):
+    temp_img_name = tmp_path / "pytest_image.jpg"
+    img = load_image("tests/img/raw/jt.png")
+    img = img.rotate(45).scale(0.4).flip(1).change_hue("white", 0.1)
+    img.save(temp_img_name)
+    assert np.array_equal(
+        img.get_dimensions(),
+        load_image(temp_img_name).get_dimensions()
+    )
+
 def test_loaded_image_should_have_same_matrix_as_pillow_images():
     image_path = "tests/img/raw/meme.jpg"
     vm_img = load_image(image_path)
