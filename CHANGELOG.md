@@ -2,6 +2,35 @@
 
 
 
+## v2.0.4 (2024-02-03)
+
+### Documentation
+
+* docs: add links to GH public profiles ([`5b1e3a4`](https://github.com/UBC-MDS/VisuMorph/commit/5b1e3a45c98441549d3f22e876481338274820d0))
+
+* docs: Feedback Addressed by @Marcony1 about adding repostatus.org badg… (#99)
+
+* docs: Feedback Addressed by @Marcony1 about adding repostatus.org badge - suggested by @wqxxzd @riyaeliza123 and @charlesxch
+
+* docs: deleted erroneously added code ([`4722ac7`](https://github.com/UBC-MDS/VisuMorph/commit/4722ac70391e43b7421264d09d85a86b26a1b0f4))
+
+### Fix
+
+* fix: `Image.__repr__()` pointing to nonexistent property (#100) ([`907fb35`](https://github.com/UBC-MDS/VisuMorph/commit/907fb35171add65c892023dd59ff2ab7e15f9980))
+
+* fix: Feedback Addressed by @Marcony1 about adding supported Python version badge - suggested by @ella-irene @wqxxzd @riyaeliza123 and @charlesxch ([`0f4bfc3`](https://github.com/UBC-MDS/VisuMorph/commit/0f4bfc33153888d3ed284f56823034a721e0cf18))
+
+### Unknown
+
+* Merge pull request #101 from UBC-MDS/96-adding-links-to-our-github-profile-in-readmemd
+
+docs: add links to GH public profiles ([`7e4038f`](https://github.com/UBC-MDS/VisuMorph/commit/7e4038f80a2bfbd2744374ca5eebd0ffef6c4c34))
+
+* Merge pull request #102 from UBC-MDS/python_version_badge
+
+fix: Feedback Addressed by @Marcony1 about adding supported Python ve… ([`e028b4c`](https://github.com/UBC-MDS/VisuMorph/commit/e028b4c9748453e92c909ca5e9fed09e279da945))
+
+
 ## v2.0.3 (2024-02-03)
 
 ### Fix
