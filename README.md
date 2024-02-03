@@ -23,10 +23,10 @@ https://visumorph.readthedocs.io/en/latest/
 ## Contributors
 In alphabetical order:
 
-- Atabak Alishiri
-- Orix Au Yeung
-- Marco Bravo
-- Shawn Hu
+- Atabak Alishiri (@atabak-alishiri)
+- Orix Au Yeung (@SoloSynth1)
+- Marco Bravo (@Marcony1)
+- Shawn Hu (@shawnhu444)
 
 ## Installation
 
