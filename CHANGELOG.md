@@ -2,6 +2,29 @@
 
 
 
+## v2.0.3 (2024-02-03)
+
+### Fix
+
+* fix: added examples, changed installation instruction, added descript… (#93)
+
+* fix: added examples, changed installation instruction, added description for test section
+
+* fix: change the argument in change_hue example
+
+* fix: removing [dev] form installation instruction
+
+Co-authored-by: Orix Au Yeung &lt;solosynth1@gmail.com&gt;
+
+* fix: changed the argument in flip example
+
+* docs: add `--cov` arg in testing command and add new one for report generation
+
+---------
+
+Co-authored-by: Orix Au Yeung &lt;solosynth1@gmail.com&gt; ([`1c9ac07`](https://github.com/UBC-MDS/VisuMorph/commit/1c9ac07c1b17dfb3f2fc530c3cf7edf39a29253a))
+
+
 ## v2.0.2 (2024-01-30)
 
 ### Documentation
