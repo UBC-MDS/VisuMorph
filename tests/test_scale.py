@@ -51,4 +51,4 @@ def test_image_as_scale_should_return_error():
 def test_string_as_scale_should_return_error():
     img = vm.load_image("tests/img/raw/meme.jpg")
     with pytest.raises(TypeError):
-        vm.scale(img, '1.0')
+        vm.scale(img, "1.0")
