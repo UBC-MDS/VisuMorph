@@ -28,11 +28,28 @@ In alphabetical order:
 
 ## Installation
 
-Currently, the package is published on PyPI. To install the package, run the following command:
+### For Regular Users
+
+Currently, the package is published on PyPI. If you're looking to use VisuMorph without diving into the development, you can easily install it using pip:
 
 ```bash
 pip install visumorph
 ```
+
+### For Developers
+
+For those interested in contributing or exploring the development version, please follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/UBC-MDS/VisuMorph.git
+   ```
+
+2. Navigate to the cloned directory and install the package in editable mode along with the development dependencies:
+   ```bash
+   pip install -e .
+   ```
+
 
 ## Features
 
@@ -43,10 +60,89 @@ VisuMorph includes a variety of functions for image manipulation:
 - **Hue Change(`change_hue`)**: Adjust the hue of images, allowing for color shifting and mood setting in visuals.
 - **Scaling(`scale`)**: Resize images, either uniformly or non-uniformly, without losing the essence of the visual content.
 
-## Run the Tests
+## Quick Start Examples
+
+For a quick glimpse into what VisuMorph can do, here are a few simple examples:
+
+### Flip an Image
+Flip an image horizontally or vertically. This example flips an image horizontally.
+
+```python
+import visumorph as vm
+
+# Load your image
+img = vm.load_image("path/to/image.jpg")
+
+# Flip the image horizontally
+flipped_img = vm.flip(img, v=0)
+
+# Save the flipped image
+flipped_img.save("path/to/flipped_image.jpg")
+```
+
+### Rotate an Image
+Rotate an image by a specified angle in degrees. This example rotates an image by 90 degrees.
+
+```python
+import visumorph as vm
+
+# Load your image
+img = vm.load_image("path/to/image.jpg")
+
+# Rotate the image by 90 degrees
+rotated_img = vm.rotate(img, rotation=90)
+
+# Save the rotated image
+rotated_img.save("path/to/rotated_image.jpg")
+```
+
+### Change Image Hue
+Change the hue of an image. This example changes the hue by a delta value.
+
+```python
+import visumorph as vm
+
+# Load your image
+img = vm.load_image("path/to/image.jpg")
+
+# Change the hue of the image
+hue_changed_img = vm.change_hue(img, delta_hue=0.3)
+
+# Save the hue-changed image
+hue_changed_img.save("path/to/hue_changed_image.jpg")
+```
+
+### Scale an Image
+Scale an image by a specified factor. This example enlarges the image by 20%.
+
+```python
+import visumorph as vm
+
+# Load your image
+img = vm.load_image("path/to/image.jpg")
+
+# Scale the image by 1.2 times
+scaled_img = vm.scale(img, scale=1.2)
+
+# Save the scaled image
+scaled_img.save("path/to/scaled_image.jpg")
+```
+
+Make sure to replace `"path/to/image.jpg"` and the save paths with the actual paths to your image files and desired output locations.
+
+
+## Running Tests
+
+To ensure VisuMorph works as expected, we've included a suite of tests. You can run these tests using pytest to verify the installation and functionality:
 
 ```bash
-pytest
+pytest --cov=visumorph
+```
+
+If a coverage report is desired, you can run the above command with an extra arugment:
+
+```bash
+pytest --cov=visumorph --cov-report=xml
 ```
 
 ## Position in the Python Ecosystem
