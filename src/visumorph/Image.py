@@ -24,7 +24,7 @@ class Image:
         pil_image.save(file_path)
 
     def __repr__(self):
-        return f"VisuMorph Image, dimensions: {self.dimensions}"
+        return f"VisuMorph Image, dimensions: {self.get_dimensions()}"
 
 
 def load_image(image_path):
