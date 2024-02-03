@@ -4,8 +4,7 @@ import numpy as np
 
 
 def change_hue(image, color="white", delta_hue=1):
-    """
-    Change the hue of a VisuMorph Image object by blending it with a layer of specified color.
+    """Change the hue of a VisuMorph Image object by blending it with a layer of specified color.
 
     Parameters
     ----------
@@ -19,7 +18,7 @@ def change_hue(image, color="white", delta_hue=1):
 
     Returns
     -------
-    VImage : visumorph.Image
+    Image : visumorph.Image
         A new VisuMorph Image object with the modified hue.
 
     Raises
