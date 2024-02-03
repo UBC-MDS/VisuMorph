@@ -19,3 +19,9 @@ def test_loaded_image_should_have_same_matrix_as_pillow_images():
     vm_img = load_image(image_path)
     pil_image = PImage.open(image_path)
     assert (np.array(pil_image) == vm_img.image).all()
+
+
+def test_image_can_print_out_repr_correctly():
+    img = load_image("tests/img/raw/meme.jpg")
+    msg = str(img)
+    assert msg == "VisuMorph Image, dimensions: (414, 552, 3)"
