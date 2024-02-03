@@ -2,6 +2,21 @@
 
 
 
+## v2.0.6 (2024-02-03)
+
+### Fix
+
+* fix: Feedback addressed by @Marcony1 about adding to the badges as suggested by @ella-irene ([`bef11bc`](https://github.com/UBC-MDS/VisuMorph/commit/bef11bcf9a630b305874dc0162f990c58f3e3503))
+
+### Unknown
+
+* Merge pull request #105 from UBC-MDS/PyPi_badge_link
+
+fix: Feedback addressed by @Marcony1 about adding to the badges as su… ([`f8eba4c`](https://github.com/UBC-MDS/VisuMorph/commit/f8eba4c9fe767f2806e89aace49fdf38e23a05c1))
+
+* Re-order version badges to be near each other ([`54a8379`](https://github.com/UBC-MDS/VisuMorph/commit/54a83796d1b42a4a49d2f616ed170c23fa0f80a7))
+
+
 ## v2.0.5 (2024-02-03)
 
 ### Fix
