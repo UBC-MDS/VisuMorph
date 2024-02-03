@@ -74,7 +74,7 @@ import visumorph as vm
 img = vm.load_image("path/to/image.jpg")
 
 # Flip the image horizontally
-flipped_img = vm.flip(img, direction='horizontal')
+flipped_img = vm.flip(img, v=0)
 
 # Save the flipped image
 flipped_img.save("path/to/flipped_image.jpg")
