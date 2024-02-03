@@ -136,7 +136,13 @@ Make sure to replace `"path/to/image.jpg"` and the save paths with the actual pa
 To ensure VisuMorph works as expected, we've included a suite of tests. You can run these tests using pytest to verify the installation and functionality:
 
 ```bash
-pytest
+pytest --cov=visumorph
+```
+
+If a coverage report is desired, you can run the above command with an extra arugment:
+
+```bash
+pytest --cov=visumorph --cov-report=xml
 ```
 
 ## Position in the Python Ecosystem
