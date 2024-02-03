@@ -2,6 +2,27 @@
 
 
 
+## v2.0.5 (2024-02-03)
+
+### Fix
+
+* fix: changed version caption to 3.9 as that is the one mentioned in the toml file ([`a94217a`](https://github.com/UBC-MDS/VisuMorph/commit/a94217a7117aad7e72f495c5afdd316725216092))
+
+* fix: changed version caption to 3.9 as that is the one mentioned in the toml file ([`c2f8604`](https://github.com/UBC-MDS/VisuMorph/commit/c2f8604079dfcd1f739a92f94b353cf13394d381))
+
+### Unknown
+
+* Merge pull request #104 from UBC-MDS/python_version_badge
+
+Python version badge version fixed ([`6960026`](https://github.com/UBC-MDS/VisuMorph/commit/696002675c65cb88f3c7544c1f5ed01d00aabb26))
+
+* add `+` sign after supported python version alttext ([`61f70bd`](https://github.com/UBC-MDS/VisuMorph/commit/61f70bda62f8660791004e7a2db7505f7255e93f))
+
+* Merge pull request #103 from UBC-MDS/revert-102-python_version_badge
+
+Revert &#34;fix: Feedback Addressed by @Marcony1 about adding supported Python ve…&#34; ([`f0c725a`](https://github.com/UBC-MDS/VisuMorph/commit/f0c725a008bc31079c9f8e685b6081279d1a6991))
+
+
 ## v2.0.4 (2024-02-03)
 
 ### Documentation
@@ -25,6 +46,8 @@
 * Merge pull request #101 from UBC-MDS/96-adding-links-to-our-github-profile-in-readmemd
 
 docs: add links to GH public profiles ([`7e4038f`](https://github.com/UBC-MDS/VisuMorph/commit/7e4038f80a2bfbd2744374ca5eebd0ffef6c4c34))
+
+* Revert &#34;fix: Feedback Addressed by @Marcony1 about adding supported Python ve…&#34; ([`53c884c`](https://github.com/UBC-MDS/VisuMorph/commit/53c884cdf6d8089fd715c67b669ee101bb19c4f2))
 
 * Merge pull request #102 from UBC-MDS/python_version_badge
 
