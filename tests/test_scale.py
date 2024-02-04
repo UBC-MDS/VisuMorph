@@ -40,3 +40,15 @@ def test_pillow_image_should_return_error():
     img = Image.open("tests/img/raw/meme.jpg")
     with pytest.raises(TypeError):
         vm.scale(img, 1.0)
+
+
+def test_image_as_scale_should_return_error():
+    img = vm.load_image("tests/img/raw/meme.jpg")
+    with pytest.raises(TypeError):
+        vm.scale(img, img)
+
+
+def test_string_as_scale_should_return_error():
+    img = vm.load_image("tests/img/raw/meme.jpg")
+    with pytest.raises(TypeError):
+        vm.scale(img, "1.0")
