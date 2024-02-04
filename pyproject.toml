@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "visumorph"
-version = "3.0.0"
+version = "3.0.1"
 description = "Package for image manipulations in Python"
 authors = ["VisuMorph authors"]
 license = "MIT"

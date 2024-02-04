@@ -2,6 +2,38 @@
 
 
 
+## v3.0.1 (2024-02-04)
+
+### Fix
+
+* fix: add back missing hyperlinks to GH profiles (#111)
+
+* fix: add back missing hyperlinks to GH profiles
+
+* Update README.md
+
+Fixed .com
+
+---------
+
+Co-authored-by: Marcony1 &lt;77180162+Marcony1@users.noreply.github.com&gt; ([`3a7cf7d`](https://github.com/UBC-MDS/VisuMorph/commit/3a7cf7d811af40e3d146f9188fda604f8033b5e5))
+
+
+## v3.0.0 (2024-02-04)
+
+### Test
+
+* test: add two test cases for non-numeric input as scale (#109)
+
+* test: add two test cases for non-numeric input as scale
+
+* style: lint new tests ([`bbe4c3d`](https://github.com/UBC-MDS/VisuMorph/commit/bbe4c3d6e4828b9e4655e268b491d859931e0df7))
+
+### Unknown
+
+* bump version to `3.0.0` (#110) ([`5a8e729`](https://github.com/UBC-MDS/VisuMorph/commit/5a8e7296980b4824cddb1173d98328256fa72f69))
+
+
 ## v2.1.1 (2024-02-03)
 
 ### Fix
