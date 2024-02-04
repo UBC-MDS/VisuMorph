@@ -27,7 +27,7 @@ In alphabetical order:
 - Atabak Alishiri ([@atabak-alishiri](https://github.com/atabak-alishiri))
 - Orix Au Yeung ([@SoloSynth1](https://github.com/SoloSynth1))
 - Marco Bravo ([@Marcony1](https://github.com/Marcony1))
-- Shawn Hu ([@shawnhu444](https://github.cm/shawnhu444))
+- Shawn Hu ([@shawnhu444](https://github.com/shawnhu444))
 
 ## Installation
 
